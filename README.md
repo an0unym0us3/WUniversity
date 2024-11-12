@@ -1,2 +1,2 @@
 # LUniversity
-A program to assist student applying for universities
+A program for professors to reject student applicants
