@@ -1,5 +1,6 @@
-# LUniversity
-A program for professors to reject student applicants
+# WUniversity
+A program to assist students applying for universities
+
 
 
 Db viewer
