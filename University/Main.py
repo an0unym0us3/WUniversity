@@ -31,10 +31,10 @@ def UniversityPage():
 
     def click(college):
         print(paths[college])
-        subprocess.run(['python', paths[college]])
+        subprocess.run(['python3', paths[college]])
 
     for college in universities:
-        image_path = f"C:/Users/adity/Downloads/WUniversity-main/University Application Hub/University/Logo/{college}.png"
+        image_path = f"Logo/{college}.png"
         image = Image.open(image_path)
         image = image.resize((200, 100), Image.LANCZOS)
         image_tk = ImageTk.PhotoImage(image)

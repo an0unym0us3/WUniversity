@@ -210,7 +210,7 @@ def open_fillments_page():
     kyushu.destroy()
     
     try:
-        subprocess.run(['python', 'FillmentsPage.py'], check=True)
+        subprocess.run(['python3', 'FillmentsPage.py'], check=True)
     except FileNotFoundError:
         print("Error: FillmentsPage.py not found!")
     except Exception as e:
