@@ -1,7 +1,7 @@
 import os
 from tkinter import *
 from PIL import Image, ImageTk  
-import pywinstyles
+#import pywinstyles
 
 
 window = Tk()
@@ -10,7 +10,7 @@ window.geometry("900x600")
 window.resizable(False, False)
 
 
-bg_image_path = "m.jpg"  
+bg_image_path = "School Project/HomePage/m.jpg"  
 if os.path.exists(bg_image_path):
     bg_image = Image.open(bg_image_path)
     bg_image = bg_image.resize((900, 600), Image.LANCZOS)
@@ -31,7 +31,7 @@ heading_label = Label(
     background="#000001"  
 )
 heading_label.place(relx=0.5, y=50, anchor="center") 
-pywinstyles.set_opacity(heading_label, color="#000001") 
+#pywinstyles.set_opacity(heading_label, color="#000001") 
 
 
 subheading_label = Label(
@@ -41,7 +41,7 @@ subheading_label = Label(
     background="#000001"  
 )
 subheading_label.place(relx=0.5, y=120, anchor="center") 
-pywinstyles.set_opacity(subheading_label, color="#000001") 
+#pywinstyles.set_opacity(subheading_label, color="#000001") 
 
 
 def on_get_started():
@@ -56,6 +56,6 @@ button_canvas.create_arc(170 - 2 * radius, 10, 170, 50, start=270, extent=180, f
 button_canvas.create_rectangle(10 + radius, 10, 170 - radius, 50, fill="red", outline="red")
 button_text = button_canvas.create_text(90, 30, text="Get Started", font=("Arial", 16, "bold"), fill="white")
 button_canvas.tag_bind(button_text, "<Button-1>", lambda event: on_get_started())
-pywinstyles.set_opacity(button_canvas, color="#000001")
+#pywinstyles.set_opacity(button_canvas, color="#000001")
 
 window.mainloop()
