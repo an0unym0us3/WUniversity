@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from PIL import Image, ImageTk 
-#import pywinstyles
+import pywinstyles
 import subprocess
 
 def UniversityPage():
@@ -16,9 +16,9 @@ def UniversityPage():
 
     root.title('University Information Hub')
 
-    welcome = ctk.CTkLabel(root, text='Select your Dream University', bg_color="#ffffff", font=("Arial Bold", 20, "bold"))
-    welcome.grid(row=0, column=0, columnspan=5, padx=0, pady=(10,20), sticky="n")
-    #pywinstyles.set_opacity(welcome, color="#000001")
+    welcome = ctk.CTkLabel(root, text='Select your Dream University', text_color="#ffffff", bg_color="#000001", font=("Arial Bold", 20, "bold")) 
+    welcome.grid(row=0, column=0, columnspan=5, padx=0, pady=(10,20), sticky="n") 
+    pywinstyles.set_opacity(welcome, color="#000001")
 
 
     universities = [
@@ -31,7 +31,7 @@ def UniversityPage():
 
     def click(college):
         print(paths[college])
-        subprocess.run(['python3', paths[college]])
+        subprocess.run(['python', paths[college]])
 
     for college in universities:
         image_path = f"Logo/{college}.png"
