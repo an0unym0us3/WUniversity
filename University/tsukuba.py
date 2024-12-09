@@ -9,7 +9,7 @@ import subprocess
 
 tsukuba = ctk.CTk()
 tsukuba.title('University of Tsukuba')
-tsukuba.geometry('1000x1000')
+tsukuba.geometry('1000x750')
 ctk.set_appearance_mode('light')
 
 def open_window():
@@ -210,7 +210,7 @@ def open_fillments_page():
     tsukuba.destroy()
     
     try:
-        subprocess.run(['python3', 'FillmentsPage.py'], check=True)
+        subprocess.run(['python', 'FillmentsPage.py'], check=True)
     except FileNotFoundError:
         print("Error: FillmentsPage.py not found!")
     except Exception as e:
