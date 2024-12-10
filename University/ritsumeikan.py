@@ -9,7 +9,13 @@ import subprocess
 
 ritsumeikan = ctk.CTk()
 ritsumeikan.title('Ritsumeikan University')
-ritsumeikan.geometry('1000x750')
+ws = ritsumeikan.winfo_screenwidth() 
+hs = ritsumeikan.winfo_screenheight() 
+w = 1000 
+h = 750 
+x = (ws/2) - (w/2) 
+y = (hs/2) - (h/2) 
+ritsumeikan.geometry('%dx%d+%d+%d' % (w, h, x, y))
 ctk.set_appearance_mode('light')
 
 def open_window():

@@ -9,7 +9,13 @@ import subprocess
 
 kyushu = ctk.CTk()
 kyushu.title('Kyushu University')
-kyushu.geometry('1000x750')
+ws = kyushu.winfo_screenwidth() 
+hs = kyushu.winfo_screenheight() 
+w = 1000 
+h = 750 
+x = (ws/2) - (w/2) 
+y = (hs/2) - (h/2) 
+kyushu.geometry('%dx%d+%d+%d' % (w, h, x, y))
 ctk.set_appearance_mode('light')
 
 def open_window():

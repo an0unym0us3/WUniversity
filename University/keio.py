@@ -9,7 +9,13 @@ import subprocess
 
 keio = ctk.CTk()
 keio.title('Keio University')
-keio.geometry('1000x750')
+ws = keio.winfo_screenwidth() 
+hs = keio.winfo_screenheight() 
+w = 1000 
+h = 750 
+x = (ws/2) - (w/2) 
+y = (hs/2) - (h/2) 
+keio.geometry('%dx%d+%d+%d' % (w, h, x, y))
 ctk.set_appearance_mode('light')
 
 def open_window():

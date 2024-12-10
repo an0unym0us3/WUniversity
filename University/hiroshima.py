@@ -9,7 +9,13 @@ import subprocess
 
 hiroshima = ctk.CTk()
 hiroshima.title('Hiroshima University')
-hiroshima.geometry('1000x750')
+ws = hiroshima.winfo_screenwidth() 
+hs = hiroshima.winfo_screenheight() 
+w = 1000 
+h = 750 
+x = (ws/2) - (w/2) 
+y = (hs/2) - (h/2) 
+hiroshima.geometry('%dx%d+%d+%d' % (w, h, x, y))
 ctk.set_appearance_mode('light')
 
 def open_window():

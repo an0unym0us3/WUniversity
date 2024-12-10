@@ -9,7 +9,13 @@ import subprocess
 
 kobe = ctk.CTk()
 kobe.title('Kobe University')
-kobe.geometry('1000x750')
+ws = kobe.winfo_screenwidth() 
+hs = kobe.winfo_screenheight() 
+w = 1000 
+h = 750 
+x = (ws/2) - (w/2) 
+y = (hs/2) - (h/2) 
+kobe.geometry('%dx%d+%d+%d' % (w, h, x, y))
 ctk.set_appearance_mode('light')
 
 def open_window():
