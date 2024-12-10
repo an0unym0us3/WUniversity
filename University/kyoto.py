@@ -9,7 +9,13 @@ import subprocess
 
 kyoto = ctk.CTk()
 kyoto.title('Kyoto University')
-kyoto.geometry('1000x750')
+ws = kyoto.winfo_screenwidth() 
+hs = kyoto.winfo_screenheight() 
+w = 1000 
+h = 750 
+x = (ws/2) - (w/2) 
+y = (hs/2) - (h/2) 
+kyoto.geometry('%dx%d+%d+%d' % (w, h, x, y))
 ctk.set_appearance_mode('light')
 
 def open_window():

@@ -6,7 +6,7 @@ import subprocess
 def UniversityPage():
     global root 
     root = ctk.CTk()
-    root.geometry('1400x700')
+    root.geometry(f'1400x700+{(root.winfo_screenwidth() / 2)}x{(root.winfo_screenheight()/ 2) - (700 / 2)}')
     ctk.set_appearance_mode('light')
     root.resizable(False, False)
 

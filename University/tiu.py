@@ -9,7 +9,13 @@ import subprocess
 
 tiu = ctk.CTk()
 tiu.title('Tokyo International University')
-tiu.geometry('1000x750')
+ws = tiu.winfo_screenwidth() 
+hs = tiu.winfo_screenheight() 
+w = 1000 
+h = 750 
+x = (ws/2) - (w/2) 
+y = (hs/2) - (h/2) 
+tiu.geometry('%dx%d+%d+%d' % (w, h, x, y))
 ctk.set_appearance_mode('light')
 
 def open_window():
