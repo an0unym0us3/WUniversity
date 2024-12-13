@@ -33,7 +33,7 @@ def on_sign_in():
         messagebox.showinfo("Sign In", "Sign In Successful")
         signin_username_entry.delete(0, END)  # Clear entry field
         signin_password_entry.delete(0, END)  # Clear entry field
-        th.switch_to('HomePage.py')
+        th.switch_to('Main.py')
 
 def create_sign_in_frame(master):
     frame = CTkFrame(master=master, width=320, height=560, fg_color="#ffffff", corner_radius=10)  # Adjusted size for content
