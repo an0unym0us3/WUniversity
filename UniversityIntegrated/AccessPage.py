@@ -1,5 +1,5 @@
 from customtkinter import *
-from tkinter import box
+from tkinter import messagebox
 from PIL import Image
 from modules import access_handler as ah, transition_handler as th, email_handler as eh
 import random
