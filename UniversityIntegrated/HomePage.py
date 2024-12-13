@@ -47,7 +47,7 @@ pywinstyles.set_opacity(subheading_label, color="#000001")
 
 def on_get_started():
     print("Get Started button clicked!")
-    th.switch_to('WorkingAccessPage.py')
+    th.switch_to('AccessPage.py')
 
 
 
