@@ -161,12 +161,15 @@ def show_recovery():
     recovery_frame.pack(expand=True, side="right", anchor="e")
 
 def do_recovery():
-    if recovery_authentication_entry.get() == auth_code:
-        ah.db_recover(recovery_username_entry.get(), reset_password_entry.get())
-        messagebox.showinfo("Successfully updated", "Login with the new password.")
-        show_sign_in()
-    else:
-        messagebox.showinfo("Code not accepted", "Please check and try again.")
+    try:
+        if recovery_authentication_entry.get() == auth_code:
+            ah.db_recover(recovery_username_entry.get(), reset_password_entry.get())
+            messagebox.showinfo("Successfully updated", "Login with the new password.")
+            show_sign_in()
+        else:
+            messagebox.showinfo("Code not accepted", "Please check and try again.")
+    except NameError:
+        messagebox.showinfo("Click 'Send code' and try again", "Please check and try again.")
     
 def create_recovery_frame(master):
     frame = CTkFrame(master=master, width=320, height=560, fg_color="#ffffff", corner_radius=10)  # Adjusted size for content
